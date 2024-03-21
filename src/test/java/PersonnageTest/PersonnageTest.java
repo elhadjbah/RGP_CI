@@ -15,6 +15,7 @@ public class PersonnageTest {
     public void testHpInitiaux() {
         Personnages personnage = new Personnages();
         assertEquals(100, personnage.getPointsDeVie());
+        //assertEquals(true,true);
     }
 
     @Test
@@ -29,6 +30,23 @@ public class PersonnageTest {
         personnage.tuer();
         assertEquals(0, personnage.getPointsDeVie());
         assertTrue(personnage.estMort());
+    }
+
+    @Test
+    public void attaque() {
+        Personnages personnage = new Personnages();
+        Personnages personnage2 = new Personnages();
+        personnage.attaquer(personnage2);
+        assertEquals(75, personnage2.getPointsDeVie());
+
+        personnage.attaquer(personnage2);
+        assertEquals(50, personnage2.getPointsDeVie());
+
+        personnage.attaquer(personnage2);
+        assertEquals(25, personnage2.getPointsDeVie());
+
+        personnage.attaquer(personnage2);
+        assertEquals(0, personnage2.getPointsDeVie());
     }
 }
 

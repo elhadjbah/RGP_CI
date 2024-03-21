@@ -17,4 +17,13 @@ public class Personnages {
         pointsDeVie = 0;
         estMort = true;
     }
+
+    public void attaquer(Personnages p){
+        if(p.getPointsDeVie()<=0){
+            p.tuer();
+        }else{
+            p.pointsDeVie=p.getPointsDeVie()-25;
+        }
+
+    }
 }

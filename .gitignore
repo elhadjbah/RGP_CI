@@ -1,0 +1,26 @@
+# Ignore les fichiers générés par Maven
+target/
+
+# Ignore les fichiers spécifiques à IntelliJ IDEA
+.idea/
+
+# Ignore les fichiers spécifiques à Eclipse
+.classpath
+.project
+.settings/
+
+# Ignore les fichiers de sauvegarde
+*~
+
+# Ignore les fichiers d'environnement
+.env
+
+# Ignore les fichiers de configuration IDE
+*.iml
+
+# Ignore les fichiers de configuration de débogage
+*.log
+
+# Ignore les fichiers de dépendances téléchargées par Maven
+dependency-reduced-pom.xml
+build/

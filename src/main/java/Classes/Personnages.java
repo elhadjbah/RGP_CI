@@ -19,11 +19,16 @@ public class Personnages {
     }
 
     public void attaquer(Personnages p){
-        if(p.getPointsDeVie()<=0){
-            p.tuer();
+        if(p.getPointsDeVie()>0){
+            p.recevoirdegat(25);
         }else{
-            p.pointsDeVie=p.getPointsDeVie()-25;
+            p.tuer();
         }
-
     }
+
+    public void recevoirdegat(int nbdegat){
+        pointsDeVie-=nbdegat;
+    }
+
+
 }

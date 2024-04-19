@@ -32,21 +32,32 @@ public class PersonnageTest {
         assertTrue(personnage.estMort());
     }
 
+
     @Test
-    public void attaque() {
-        Personnages personnage = new Personnages();
+    public void attaque2() {
+        Personnages personnage1 = new Personnages();
         Personnages personnage2 = new Personnages();
-        personnage.attaquer(personnage2);
+
+        personnage1.attaquer(personnage2);
         assertEquals(75, personnage2.getPointsDeVie());
 
-        personnage.attaquer(personnage2);
+        personnage1.attaquer(personnage2);
         assertEquals(50, personnage2.getPointsDeVie());
 
-        personnage.attaquer(personnage2);
+        personnage1.attaquer(personnage2);
         assertEquals(25, personnage2.getPointsDeVie());
 
-        personnage.attaquer(personnage2);
+        personnage1.attaquer(personnage2);
         assertEquals(0, personnage2.getPointsDeVie());
+        //assertTrue(personnage2.estMort());
+    }
+
+    @Test
+    public void recevoirdegat() {
+        Personnages personnage = new Personnages();
+        personnage.recevoirdegat(1);
+        assertEquals(99, personnage.getPointsDeVie());
+        assertFalse(personnage.estMort());
     }
 }
 

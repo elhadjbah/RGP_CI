@@ -2,13 +2,12 @@ package Classes;
 
 public class MachineACafe {
 
-    private int nombreCafesServis;
+    public static int nombreCafesServis;
     private int montantRecuperes;
-    public MachineACafe(int nombreCafe){
-        this.nombreCafesServis=nombreCafe;
-    }
+
     public void inserer(int piece){
         montantRecuperes+=piece;
+        nombreCafesServis+=1;
     }
 
     public int nombreCafesServis(){
